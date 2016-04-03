@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HackerNews">
+  <DataContextMoniker Name="/HackerNewsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dc83d0e4-76e6-44f9-8c90-0433a275facf" absoluteBounds="3.5, 0.875, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/HackerNewsDataContext/Link" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ffa3f59-a293-4e97-8d1a-6a110eecc9e6" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="feba3861-e87d-4717-bf16-8ba8e7122367" absoluteBounds="0.75, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/HackerNewsDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e15d8495-685c-4021-a1fc-14b73f9c7a72" absoluteBounds="0.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a04dd99-3326-4ead-8f44-20936423bb74" absoluteBounds="6.25, 1.25, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/HackerNewsDataContext/Upvote" />
+      <nestedChildShapes>
+        <elementListCompartment Id="653b9021-21cd-462a-9970-8b5db41d387f" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HackerNewsDataContext/User/User_Link" />
+      <nodes>
+        <classShapeMoniker Id="feba3861-e87d-4717-bf16-8ba8e7122367" />
+        <classShapeMoniker Id="dc83d0e4-76e6-44f9-8c90-0433a275facf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.84699625651042); (6.25 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HackerNewsDataContext/Link/Link_Upvote" />
+      <nodes>
+        <classShapeMoniker Id="dc83d0e4-76e6-44f9-8c90-0433a275facf" />
+        <classShapeMoniker Id="1a04dd99-3326-4ead-8f44-20936423bb74" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 1.125); (1.75 : 0.625); (5.875 : 0.625); (5.875 : 1.51724612825521); (6.25 : 1.51724612825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HackerNewsDataContext/User/User_Upvote" />
+      <nodes>
+        <classShapeMoniker Id="feba3861-e87d-4717-bf16-8ba8e7122367" />
+        <classShapeMoniker Id="1a04dd99-3326-4ead-8f44-20936423bb74" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

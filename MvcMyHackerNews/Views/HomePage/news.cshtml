@@ -1,0 +1,33 @@
+﻿@using HackerRepo
+@using LoggingRepo;
+@model MvcMyHackerNews.Models.HomePageViewModel
+
+<h2>index</h2>
+@foreach(LinkAndRatings l in Model.AllLinks)
+{
+    <div class="well"> 
+       @if (Model.IntLinkList == null)
+       {
+        <button class="upvote" data-id="@l.Id" data-userid="@Model.UserId" style="float:left;">&#8593</button>
+       }
+       else
+       {
+           if (!Model.IntLinkList.Any(item => item == l.Id))
+           {
+            <button class="upvote" data-id="@l.Id" data-userid="@Model.UserId" style="float:left;">&#8593</button>
+           }
+           else
+           {
+            <button class="upvote" data-id="@l.Id" data-userid="@Model.UserId" style="float:left;display:none;">&#8593</button>
+           }
+       }
+        
+        <h4><a href="@l.Url">@l.Title</a></h4>
+        <h5><span class="points">@l.Points</span>  points by <a href="user/@l.Slug">@l.User.Username</a></h5>
+        
+    </div>
+}
+<h1></h1>
+@section scripts{
+<script src="~/Scripts/NewFolder1/siteSscripts/news.js"></script>
+}
